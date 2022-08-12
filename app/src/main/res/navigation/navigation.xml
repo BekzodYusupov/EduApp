@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        tools:layout="@layout/screen_splash"
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.edumedupedu.ui.screens.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_courseScreen"
+            app:destination="@id/courseScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_course"
+        android:id="@+id/courseScreen"
+        android:name="uz.gita.edumedupedu.ui.screens.CourseScreen"
+        android:label="CourseScreen" >
+        <action
+            android:id="@+id/action_courseScreen_to_groupScreen"
+            app:destination="@id/groupScreen" />
+        <action
+            android:id="@+id/action_courseScreen_to_addScreen"
+            app:destination="@id/addScreen" />
+        <action
+            android:id="@+id/action_courseScreen_to_editScreen"
+            app:destination="@id/editScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_group"
+        android:id="@+id/groupScreen"
+        android:name="uz.gita.edumedupedu.ui.screens.GroupScreen"
+        android:label="GroupScreen" >
+        <action
+            android:id="@+id/action_groupScreen_to_addGroupScreen"
+            app:destination="@id/addGroupScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_add_course"
+        android:id="@+id/addScreen"
+        android:name="uz.gita.edumedupedu.ui.screens.AddCourseScreen"
+        android:label="AddScreen" />
+    <fragment
+        tools:layout="@layout/screen_edit"
+        android:id="@+id/editScreen"
+        android:name="uz.gita.edumedupedu.ui.screens.EditScreen"
+        android:label="EditScreen" />
+    <fragment
+        tools:layout="@layout/screen_add_group"
+        android:id="@+id/addGroupScreen"
+        android:name="uz.gita.edumedupedu.ui.screens.AddGroupScreen"
+        android:label="AddGroupScreen" />
+</navigation>

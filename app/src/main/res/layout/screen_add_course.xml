@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/toolBar"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#FF5722"
+        android:elevation="6dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="Courses"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolBar"
+        app:layout_constraintEnd_toEndOf="@+id/toolBar"
+        app:layout_constraintStart_toStartOf="@+id/toolBar"
+        app:layout_constraintTop_toTopOf="@+id/toolBar" />
+
+    <ImageView
+        android:id="@+id/ivBackToHomeFromCourseAdd"
+        android:layout_width="50dp"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toTopOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:elevation="10dp"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/etAddFromCourseAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Type course name:"
+        app:layout_constraintBottom_toTopOf="@+id/btnAddFromCourseAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <Button
+        android:id="@+id/btnAddFromCourseAdd"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:backgroundTint="#FF5722"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
